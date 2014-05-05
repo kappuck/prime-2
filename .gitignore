@@ -1,12 +1,36 @@
-*.class
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+public class Prime {
+	
+	 public static void main(String args[]){
+	 		 	 	 
+		  for (int i = 2; i <=10;i++){
+			  inner:
+		 		 for(int j =2; j<=i;j++){
+		 				 			  
+		 			 if(i%j == 0){
+		 				 
+			 			  if(i/j ==1){
+			 				 System.out.println("  PRIME :" + i);
+			 				 break; 
+			 			  }
+			 			 if(i/j != 1){
+			 				 System.out.println("NOT PRIME : " + i);
+			 				 break;
+			 			 }
+		 			  }
+		  
+				  	 if(i%j != 0){
+			 		 			  
+	 		 			  if(j==i-1){
+	 		 				  System.out.println("PRIME:" + i);
+	 		 				  break;
+	 		 			  }
+	 		 			  if(j<i){
+	 		 				  continue inner;
+	 	 		 		  }
+				  	 }
+		 		 }
+		 	}
+		 }
+	}
+	
+	
